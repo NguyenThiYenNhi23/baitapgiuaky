@@ -1,0 +1,56 @@
+table {
+    width: 100%;
+    border: 50px;
+    font-family:'Times New Roman', Times, serif;
+    color:black;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color:darkseagreen;
+    color:black;
+}
+
+tbody tr:nth-child(even) {
+    background-color:gainsboro;
+}
+
+tbody tr:hover {
+
+    background-color:darkseagreen;
+}
+/* Định dạng cho form */
+.search-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+/* Định dạng cho input tìm kiếm */
+.search-input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 300px; /* Chiều rộng của ô input */
+    margin-right: 10px; /* Khoảng cách giữa input và button */
+}
+
+/* Định dạng cho nút tìm kiếm */
+.search-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50; /* Màu nền nút */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: right;
+}
+
+
