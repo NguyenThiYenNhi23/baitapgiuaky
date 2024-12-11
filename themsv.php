@@ -63,7 +63,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $level = $_POST['level'];
     $group = $_POST['group'];
     // Chỉnh sửa lại cú pháp SQL
-    $sql = "INSERT INTO table_Students (fullname, dob, gender, hometown, level, group)
+    $sql = "INSERT INTO table_Students (fullname, dob, gender, hometown, level, 'group')
             VALUES ('$fullname', '$dob', '$gender', '$hometown', '$level', '$group')";
 
 
