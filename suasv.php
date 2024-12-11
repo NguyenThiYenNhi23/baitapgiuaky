@@ -24,11 +24,11 @@ if (isset($_GET['id'])) {
         $gender = $_POST['gender'];
         $hometown = $_POST['hometown'];
         $level = $_POST['level'];
-        $group_id = $_POST['group_id'];
+        $group = $_POST['group'];
 
         $update_sql = "UPDATE table_Students 
                        SET fullname = '$fullname', dob = '$dob', gender = $gender, 
-                           hometown = '$hometown', level = $level, group_id = $group_id 
+                           hometown = '$hometown', level = $level, group = $group
                        WHERE id = $id";
 
         if ($conn->query($update_sql) === TRUE) {
