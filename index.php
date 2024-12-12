@@ -6,9 +6,15 @@ if ($conn->connect_error) {
 $search = "";
 if(isset($_GET["search"]) && !empty($_GET["search"])){
     $search = $_GET['search'];
-    $sql = "SELECT * FROM table_Students WHERE (fullname LIKE '%$search%')OR (hometown LIKE '%$search%')";
+    $sql = "SELECT * FROM table_Students WHERE fullname LIKE ? OR hometown LIKE ?";
+    $stmt = $conn->prepare($sql);
+    $searchTerm = "%" . $search . "%";
+    $stmt->bind_param("ss", $searchTerm, $searchTerm);
+    $stmt->execute();
+    $result = $stmt->get_result();
 }else{
     $sql = "SELECT * FROM table_Students";
+    $result = $conn->query($sql);
 }
 
 $sql = "SELECT * FROM table_Students";
